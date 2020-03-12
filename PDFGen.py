@@ -6,7 +6,7 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import inch
 doc = SimpleDocTemplate("Oceaneering_Update.pdf",pagesize=letter,rightMargin=72,leftMargin=72,topMargin=72,bottomMargin=18)
 Story=[]
-logo = "logo.png"
+logo = "logoC.png"
 signature = "signature.png"
 magName = "Oceaneering"
 issueNum = 12
@@ -14,10 +14,13 @@ subPrice = "99.00"
 limitedDate = "03/05/2020"
 freeGift = "tin foil hat"
 formatted_time = time.ctime()
-full_name = "Terje S Skauen"
-address_parts = ["Vestre Svanholmen 56, Sandnes, Norway"]
+full_name = "Magne Andersen"
+address_parts = ["Vestre Svanholmen 24, 4313 Sandnes, Norway"]
+
 im = Image(logo, 3*inch, 1.3*inch)
 Story.append(im)
+#im.hAlign = 'LEFT'
+
 Story.append(Spacer(1, 42))
 styles=getSampleStyleSheet()
 styles.add(ParagraphStyle(name='Justify', alignment=TA_JUSTIFY))
